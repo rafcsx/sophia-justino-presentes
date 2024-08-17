@@ -1,0 +1,388 @@
+/* Estilo geral do corpo */
+* {
+    font-family: "Mulish", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #130930;
+    color: #FE59BB;
+    overflow-x: hidden;
+    position: relative;
+    min-height: 100vh;
+}
+
+/* Estilo do cabeçalho */
+header {
+    position: relative;
+    background-color: #130930; /* Cor de fundo do cabeçalho */
+    color: white;
+    padding: 10px 20px; /* Ajuste o padding conforme necessário */
+    display: flex;
+    align-items: center;
+}
+
+/* Contêiner de navegação */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: -50%;
+    height: -50%;
+}
+/* Estilo do logo */
+.nav-menu img {
+    height: 100px; /* Ajuste a altura da logo conforme necessário */
+    display: block; /* Garante que a imagem não fique no mesmo nível de outros elementos */
+}
+
+/* Logo */
+.logo {
+    height: 20px; /* Reduz a altura da logo */
+    margin-right: auto; /* Garante que a logo esteja alinhada à esquerda */
+}
+
+/* Menu de navegação */
+.nav-menu {
+    display: flex;
+    align-items: center;
+}
+
+/* Lista de itens do menu */
+.nav-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+/* Itens da lista do menu */
+.nav-menu li {
+    margin: 0 15px; /* Ajuste o espaçamento entre os itens do menu */
+}
+
+/* Links do menu */
+.nav-menu a {
+    color: white; /* Cor do texto dos links */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    font-size: 16px; /* Tamanho da fonte dos links */
+    padding: 10px 15px; /* Espaçamento interno dos links */
+    border-radius: 5px; /* Bordas arredondadas dos links */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Transições suaves para cor e sombra */
+    font-family: "Mulish", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 10;
+    letter-spacing: 3px;
+    color: #ffffff;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Link ativo */
+.nav-menu a.active {
+    font-weight: bold; /* Deixa o texto em negrito para o link ativo */
+    background-color: #0a66c2; /* Cor de fundo para o item ativo */
+    box-shadow: 0 0 10px rgba(10, 102, 194, 0.8); /* Sombra azul clara para o item ativo */
+}
+
+/* Efeito hover */
+.nav-menu a:hover {
+    background-color: rgba(254, 89, 187, 0.3); /* Cor de fundo ao passar o mouse com mais opacidade */
+    box-shadow: 0 0 15px rgba(254, 89, 187, 0.7); /* Sombra rosa clara ao passar o mouse */
+}
+
+/* Estilos do menu em dispositivos móveis */
+.nav-menu ul {
+    display: flex;
+    align-items: center;
+}
+
+/* Estilo do menu de navegação para dispositivos móveis */
+.nav-menu-toggle {
+    display: none; /* Oculta o botão por padrão (desktop) */
+    font-size: 25px;
+    cursor: pointer;
+    color: #FE59BB;
+    position: absolute; /* Posiciona o botão de forma absoluta */
+    right: 20px; /* Ajuste a distância do canto direito conforme necessário */
+    top: 50%; /* Posiciona verticalmente ao centro do cabeçalho */
+    transform: translateY(-50%); /* Centraliza verticalmente */
+}
+
+/* Estilo do menu de navegação para dispositivos móveis */
+@media (max-width: 768px) {
+    .nav-menu ul {
+        display: none; /* Oculta o menu no mobile */
+    }
+
+    .nav-menu-toggle {
+        display: block; /* Exibe o botão de menu no mobile */
+    }
+}
+
+
+/* Estilo das molduras */
+.molduras-orbita {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.moldura {
+    background-color: #1a0d3e;
+    border: 2px solid #FE59BB;
+    border-radius: 10px;
+    padding: 10px;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+
+.moldura i {
+    font-size: 50px;
+    color: #FE59BB;
+    margin: 30px 0;
+}
+
+.item-info {
+    position: absolute;
+    top: -20px;
+    background-color: #1a0d3e;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 2px solid #FE59BB;
+    color: #FE59BB;
+    font-weight: bold;
+    white-space: nowrap;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.botao-container {
+    margin-top: auto;
+    width: 100%;
+    text-align: center;
+}
+
+.comprar-btn {
+    background-color: #FE59BB;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    margin-top: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.comprar-btn:hover {
+    background-color: #9D4EDD;
+}
+
+.comprado {
+    background-color: #4CAF50;
+    color: white;
+    cursor: default;
+    border: none;
+}
+
+/* Estilo do formulário de faixa de preços */
+.preco-secao {
+    padding: 20px;
+    margin: 0 auto;
+    background-color: #130930;
+    max-width: 800px;
+    box-sizing: border-box;
+}
+
+.preco-titulo {
+    color: #FE59BB;
+    text-align: left;
+    font-size: 1.5em;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-control {
+    background-color: #1a0d3e;
+    color: #FE59BB;
+    border: 1px solid #FE59BB;
+    border-radius: 8px;
+    padding: 10px;
+    font-family: 'Mulish', sans-serif;
+    font-size: 1em;
+}
+
+.form-control:focus {
+    border-color: #b8407c;
+    box-shadow: 0 0 10px rgba(254, 89, 187, 0.5);
+}
+
+/* Estilo do footer */
+footer {
+    position: relative;
+    background-color: #1a0d3e;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    font-weight: 300; /* Ajuste o peso da fonte para menos negrito */
+    /* Outras propriedades podem ser ajustadas conforme necessário */
+}
+
+.social-icon {
+    margin: 0 10px;
+    color: #FE59BB;
+    font-size: 24px;
+    transition: color 0.3s;
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    color: #ffffff;
+}
+
+.name {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.copyright {
+    font-size: 12px;
+    margin-top: 10px;
+    color: #FE59BB;
+    text-decoration: none;
+}
+
+/* Estilo da seção de introdução */
+.introducao-secao {
+    padding: 20px;
+    background-color: #130930;
+    color: white;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: justify;
+    box-sizing: border-box;
+}
+
+.introducao-titulo {
+    color: #FE59BB;
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.introducao-paragrafo {
+    font-size: 1em;
+    line-height: 1.8;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+/* Centraliza a imagem dentro do contêiner */
+.image-center {
+    text-align: center; /* Centraliza o conteúdo dentro do contêiner */
+    margin-top: 20px; /* Espaçamento superior, ajuste conforme necessário */
+}
+
+.image-center img {
+    max-width: 60%; /* Garante que a imagem não ultrapasse o contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 10px; /* Adiciona bordas arredondadas, ajuste conforme desejado */
+}
+
+/* Media queries para responsividade */
+@media (max-width: 768px) {
+    .nav-menu {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-menu a {
+        padding: 8px 12px;
+    }
+
+    .moldura {
+        width: 150px;
+        padding: 15px;
+    }
+
+    .moldura i {
+        font-size: 40px;
+    }
+
+    .comprar-btn {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .preco-secao {
+        padding: 15px;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .nav-menu a {
+        font-size: 14px;
+        padding: 6px 10px;
+    }
+
+    .moldura {
+        width: 120px;
+        padding: 10px;
+    }
+
+    .moldura i {
+        font-size: 30px;
+    }
+
+    .comprar-btn {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+
+    .preco-secao {
+        padding: 10px;
+    }
+
+}
+
+/* Estilo do ícone de menu no mobile */
+@media (max-width: 768px) {
+    .nav-menu ul {
+        display: none;
+    }
+
+    .nav-menu::after {
+        content: '☰';
+        font-size: 25px;
+        cursor: pointer;
+        display: inline-block;
+        color: #FE59BB;
+    }
+}
